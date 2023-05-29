@@ -12,9 +12,27 @@
 // Organizzare i singoli membri in card/schede
 
 
-// Wayne Barnett     ounder & CEO      wayne-barnett-founder-ceo.jpg
-// Angela Caroll     Chief Editor      angela-caroll-chief-editor.jpg
-// Walter Gordon     Office Manager    walter-gordon-office-manager.jpg
-// Angela Lopez      Social Media      Manager  angela-lopez-social-media-manager.jpg
-// Scott Estrada     Developer         scott-estrada-developer.jpg
-// Barbara Ramos     Graphic Designer  barbara-ramos-graphic-designer.jpg
+// Wayne Barnett     Founder & CEO            wayne-barnett-founder-ceo.jpg
+// Angela Caroll     Chief Editor             angela-caroll-chief-editor.jpg
+// Walter Gordon     Office Manager           walter-gordon-office-manager.jpg
+// Angela Lopez      Social Media Manager     angela-lopez-social-media-manager.jpg
+// Scott Estrada     Developer                scott-estrada-developer.jpg
+// Barbara Ramos     Graphic Designer         barbara-ramos-graphic-designer.jpg
+
+const WBmembers = [
+    newWayneBarnettMember ("Wayne Barnett", "Founder & CEO", "wayne-barnett-founder-ceo.jpg"),
+    newWayneBarnettMember ("Angela Carrol", "Chief Editor", "angela-caroll-chief-editor.jpg"),
+    newWayneBarnettMember ("Walter Gordon", "Office Manager", "walter-gordon-office-manager.jpg"),
+    newWayneBarnettMember ("Angela Lopez", "Social Media Manager", "angela-lopez-social-media-manager.jpg"),
+    newWayneBarnettMember ("Scott Estrada", "Developer", "scott-estrada-developer.jpg"),
+    newWayneBarnettMember ("Barbara Ramos", "Graphic Designer", "barbara-ramos-graphic-designer.jpg"),
+]
+
+function newWayneBarnettMember (nome, ruolo, foto) {
+    const member = {
+        name: nome,
+        role: ruolo,
+        picture: foto
+    }
+    return member
+}
