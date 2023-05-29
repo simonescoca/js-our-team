@@ -1,0 +1,22 @@
+body{
+    height: 50vh;
+    display: flex;
+}
+
+section{
+    margin: 5rem auto 0;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    width: fit-content;
+    padding-bottom: 2rem;
+}
+
+td, th{
+    padding: 12px 26px;
+    text-align: center;
+}
