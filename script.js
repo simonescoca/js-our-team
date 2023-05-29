@@ -28,11 +28,32 @@ const WBmembers = [
     newWayneBarnettMember ("Barbara Ramos", "Graphic Designer", "barbara-ramos-graphic-designer.jpg"),
 ]
 
-function newWayneBarnettMember (nome, ruolo, foto) {
-    const member = {
-        name: nome,
-        role: ruolo,
-        picture: foto
+for (let i = 0 ; i < WBmembers.length ; i++) {
+
+    for (let key in WBmembers[i]) {
+        console.log (key + ": " + WBmembers[i][key])
     }
+
+    console.log("//////////////")
+}
+
+// FUNCTIONS ///////////////////////////////////////////////////////
+
+/**
+ * Creates an object of every member of WB company containing infos about them
+ * @param {string} nome His / Her name
+ * @param {string} ruolo His / Her role
+ * @param {string} foto A picture of Him / Her
+ * @returns {object} An object containing these infos
+ */
+
+function newWayneBarnettMember (nome, ruolo, foto) {
+
+    const member = {
+        Name: nome,
+        Role: ruolo,
+        Picture: foto
+    }
+    
     return member
 }
