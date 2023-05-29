@@ -19,6 +19,8 @@
 // Scott Estrada     Developer                scott-estrada-developer.jpg
 // Barbara Ramos     Graphic Designer         barbara-ramos-graphic-designer.jpg
 
+const tbodyElement = document.getElementById ("tbody")
+
 const WBmembers = [
     newWayneBarnettMember ("Wayne Barnett", "Founder & CEO", "wayne-barnett-founder-ceo.jpg"),
     newWayneBarnettMember ("Angela Carrol", "Chief Editor", "angela-caroll-chief-editor.jpg"),
@@ -30,11 +32,14 @@ const WBmembers = [
 
 for (let i = 0 ; i < WBmembers.length ; i++) {
 
+    createsTrElement (i)
+
     for (let key in WBmembers[i]) {
         console.log (key + ": " + WBmembers[i][key])
+        createsTdElement (i, key)
     }
 
-    console.log("//////////////")
+    console.log ("//////////////")
 }
 
 // FUNCTIONS ///////////////////////////////////////////////////////
@@ -56,4 +61,16 @@ function newWayneBarnettMember (nome, ruolo, foto) {
     }
     
     return member
+}
+
+function createsTrElement (index) {
+    const trElement = document.createElement ("tr")
+    trElement.id = "tr" + index
+    tbodyElement.appendChild (trElement)
+}
+
+function createsTdElement (index, key) {
+    const tdElement = document.createElement ("td")
+    tdElement.append (WBmembers[index][key])
+    document.getElementById ("tr" + index).appendChild (tdElement)
 }
